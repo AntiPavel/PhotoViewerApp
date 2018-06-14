@@ -28,6 +28,7 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
+.bundle
 
 ## Playgrounds
 timeline.xctimeline
@@ -41,6 +42,8 @@ playground.xcworkspace
 .build/
 
 # CocoaPods - Refactored to standalone file
+Pods/
+*xcworkspace/xcuserdata/*
 
 # Carthage - Refactored to standalone file
 
