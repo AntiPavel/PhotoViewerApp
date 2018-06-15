@@ -24,6 +24,12 @@
 		0F9B99EF20D4146400C54CE3 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B99EE20D4146400C54CE3 /* ErrorResponse.swift */; };
 		0F9B99F020D4146400C54CE3 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B99EE20D4146400C54CE3 /* ErrorResponse.swift */; };
 		0F9B99F120D4146400C54CE3 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B99EE20D4146400C54CE3 /* ErrorResponse.swift */; };
+		0F9B99F820D4292200C54CE3 /* ReactiveExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B99F720D4292200C54CE3 /* ReactiveExtensions.swift */; };
+		0F9B99F920D4292200C54CE3 /* ReactiveExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B99F720D4292200C54CE3 /* ReactiveExtensions.swift */; };
+		0F9B99FA20D4292200C54CE3 /* ReactiveExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B99F720D4292200C54CE3 /* ReactiveExtensions.swift */; };
+		0F9B99FC20D429BE00C54CE3 /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B99FB20D429BE00C54CE3 /* NSObjectExtensions.swift */; };
+		0F9B99FD20D429BE00C54CE3 /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B99FB20D429BE00C54CE3 /* NSObjectExtensions.swift */; };
+		0F9B99FE20D429BE00C54CE3 /* NSObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9B99FB20D429BE00C54CE3 /* NSObjectExtensions.swift */; };
 		A5EB32F83270E031AD7BD87D /* Pods_PhotoViewerAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E44955BA9CA44243775B31 /* Pods_PhotoViewerAppTests.framework */; };
 		F8436720A04B0EF316FB815E /* Pods_PhotoViewerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A5D4C248856D0B2F8B2F106 /* Pods_PhotoViewerApp.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +68,8 @@
 		0F9B99E620D4130200C54CE3 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		0F9B99EA20D4142F00C54CE3 /* SuccessResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessResponse.swift; sourceTree = "<group>"; };
 		0F9B99EE20D4146400C54CE3 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		0F9B99F720D4292200C54CE3 /* ReactiveExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactiveExtensions.swift; sourceTree = "<group>"; };
+		0F9B99FB20D429BE00C54CE3 /* NSObjectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtensions.swift; sourceTree = "<group>"; };
 		1A5D4C248856D0B2F8B2F106 /* Pods_PhotoViewerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoViewerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51E44955BA9CA44243775B31 /* Pods_PhotoViewerAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoViewerAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C5EA0EFF00740901844DA9 /* Pods-PhotoViewerAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoViewerAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoViewerAppUITests/Pods-PhotoViewerAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +163,7 @@
 		0F9B99E220D3055B00C54CE3 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				0F9B99F220D427ED00C54CE3 /* Extensions */,
 				0F9B99E520D3060300C54CE3 /* Models */,
 				0F9B99E320D3058A00C54CE3 /* AppDelegate */,
 			);
@@ -187,6 +196,15 @@
 				0F9B99EE20D4146400C54CE3 /* ErrorResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0F9B99F220D427ED00C54CE3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0F9B99F720D4292200C54CE3 /* ReactiveExtensions.swift */,
+				0F9B99FB20D429BE00C54CE3 /* NSObjectExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2D4B409BEEA750A64DBFC6F2 /* Frameworks */ = {
@@ -488,7 +506,9 @@
 				0F9B99EB20D4142F00C54CE3 /* SuccessResponse.swift in Sources */,
 				0F9B99E720D4130200C54CE3 /* Photo.swift in Sources */,
 				0F88148720D2A90700A0B9E2 /* ViewController.swift in Sources */,
+				0F9B99FC20D429BE00C54CE3 /* NSObjectExtensions.swift in Sources */,
 				0F88148520D2A90700A0B9E2 /* AppDelegate.swift in Sources */,
+				0F9B99F820D4292200C54CE3 /* ReactiveExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,7 +519,9 @@
 				0F9B99E820D4130200C54CE3 /* Photo.swift in Sources */,
 				0F9B99EC20D4142F00C54CE3 /* SuccessResponse.swift in Sources */,
 				0F88149A20D2A90900A0B9E2 /* PhotoViewerAppTests.swift in Sources */,
+				0F9B99F920D4292200C54CE3 /* ReactiveExtensions.swift in Sources */,
 				0F9B99F020D4146400C54CE3 /* ErrorResponse.swift in Sources */,
+				0F9B99FD20D429BE00C54CE3 /* NSObjectExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,7 +532,9 @@
 				0F9B99E920D4130200C54CE3 /* Photo.swift in Sources */,
 				0F9B99ED20D4142F00C54CE3 /* SuccessResponse.swift in Sources */,
 				0F8814A520D2A90900A0B9E2 /* PhotoViewerAppUITests.swift in Sources */,
+				0F9B99FA20D4292200C54CE3 /* ReactiveExtensions.swift in Sources */,
 				0F9B99F120D4146400C54CE3 /* ErrorResponse.swift in Sources */,
+				0F9B99FE20D429BE00C54CE3 /* NSObjectExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
