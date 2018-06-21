@@ -9,17 +9,11 @@
 import Foundation
 
 struct Photo: Decodable {
-    struct Source: Decodable {
-        let name: String?
-    }
     
-    let source: Source?
-    let info: String?
-    let camera: String?
-    let lens: String?
-    let focalLength: String?
-    let iso: String?
-    let shutterSpeed: String?
-    let highest_rating: Double?
-    let imageurl: String?
+    let id: String?
+    let owner: String?
+    let secret: String?
+    let server: String?
+    let farm: Int?
+    let title: String?
 }

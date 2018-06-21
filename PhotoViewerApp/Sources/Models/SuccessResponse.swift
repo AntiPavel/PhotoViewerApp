@@ -9,7 +9,7 @@
 import Foundation
 
 struct SuccessResponse: Decodable {
-    let status: String
-    let totalResults: Int
-    let articles: [Photo]
+    
+    let stat: String
+    let photos: Photos
 }
