@@ -10,10 +10,16 @@ import Foundation
 
 struct Photo: Decodable {
     
+    struct Description: Decodable {
+        let _content: String?
+    }
+    
     let id: String?
     let owner: String?
     let secret: String?
     let server: String?
     let farm: Int?
     let title: String?
+    let ownername: String?
+    let description: Description?
 }

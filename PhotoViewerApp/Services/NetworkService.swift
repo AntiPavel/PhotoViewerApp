@@ -82,7 +82,7 @@ public struct NetworkService {
         
         var parameters: Parameters {
             if case .args(let page, let perPage) = self {
-                return [
+                return ["extras":"description,owner_name",
                         "per_page": perPage,
                         "page": page,
                         "api_key": Api.key,
