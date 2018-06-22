@@ -39,7 +39,6 @@ public struct NetworkService {
         }
     }
     
-    
     private enum Router: URLRequestConvertible {
         
         case getRecentPhotos(fetchRequest: FetchRequest)
@@ -82,12 +81,12 @@ public struct NetworkService {
         
         var parameters: Parameters {
             if case .args(let page, let perPage) = self {
-                return ["extras":"description,owner_name",
+                return ["extras": "description,owner_name",
                         "per_page": perPage,
                         "page": page,
                         "api_key": Api.key,
-                        "format":"json",
-                        "nojsoncallback":1,
+                        "format": "json",
+                        "nojsoncallback": 1,
                 ]
             }
             return [:]
