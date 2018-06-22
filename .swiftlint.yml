@@ -2,8 +2,11 @@ disabled_rules:
  - trailing_whitespace
 excluded:
  - Pods
- trailing_comma:
+trailing_comma:
   mandatory_comma: true
+
+opt_in_rules:
+- force_unwrapping
 
 force_try: error
 force_cast: error

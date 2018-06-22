@@ -8,12 +8,14 @@
 
 import Foundation
 
-struct Photo: Decodable {
-    
-    struct Description: Decodable {
-        let _content: String?
+struct Description: Decodable {
+    let content: String?
+    private enum CodingKeys: String, CodingKey {
+        case content = "_content"
     }
-    
+}
+
+struct Photo: Decodable {
     let id: String?
     let owner: String?
     let secret: String?

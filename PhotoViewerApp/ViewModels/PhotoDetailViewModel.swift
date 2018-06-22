@@ -18,7 +18,7 @@ struct PhotoDetailViewModel {
     init(photo: Photo) {
         owner = photo.ownername
         title = photo.title
-        description = photo.description?._content ?? "no description"
+        description = photo.description?.content ?? "no description"
         urlToImage = "https://farm\(photo.farm ?? 1).staticflickr.com/\(photo.server ?? "")/\(photo.id ?? "")_\(photo.secret ?? "").jpg"
     }
 }

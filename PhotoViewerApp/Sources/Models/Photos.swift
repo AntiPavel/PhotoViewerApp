@@ -24,7 +24,7 @@ struct Photos: Decodable {
                       photo: [])
     }
     
-    func from(new newPhotos:Photos) -> Photos {
+    func from(new newPhotos: Photos) -> Photos {
         return newPhotos.page == 1 && newPhotos.photo.count == 0 ? newPhotos :
             Photos(page: newPhotos.page + 1,
                      pages: newPhotos.pages,
