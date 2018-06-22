@@ -7,30 +7,44 @@
 //
 
 import XCTest
+import Nimble
 
 class PhotoViewerAppUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testUiElementCounts() {
+        XCTAssertGreaterThan(XCUIApplication().collectionViews.cells.count, 0)
+        let cell = XCUIApplication().collectionViews.cells.element(boundBy: 3)
+        XCTAssertEqual(cell.staticTexts.count, 3)
+        XCTAssertEqual(cell.images.count, 1)
+    }
+    
+    func testTransitionFromCell() {
+        let cell = XCUIApplication().collectionViews.cells.element(boundBy: 3)
+        let owner = cell.staticTexts.element(boundBy: 1).label
+        let description = cell.staticTexts.element(boundBy: 2).label
+        cell.tap()
+        
+        waitUntil(timeout: 3.0, action: { done in
+            XCTAssertEqual(XCUIApplication().scrollViews.count, 1)
+            XCTAssertEqual(XCUIApplication().images.count, 1)
+            XCTAssertEqual(XCUIApplication().staticTexts.count, 2)
+            
+            let ownerDetail = XCUIApplication().staticTexts.element(boundBy: 0).label
+            let descriptionDetail = XCUIApplication().staticTexts.element(boundBy: 1).label
+            
+            expect(ownerDetail).to(equal(owner))
+            expect(descriptionDetail).to(equal(description))
+            done()
+        })
     }
     
 }
